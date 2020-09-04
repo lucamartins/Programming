@@ -24,6 +24,8 @@ int optimizedFactorization(ll N){
 }
 
 int main(){
+    ios_base::sync_with_stdio(false);
+    
     ll N; cin >> N;
 
     cout << optimizedFactorization(N) << endl;
