@@ -1,3 +1,4 @@
+// Trabalho Campo Minado
 #include <stdio.h>
 
 int n;
