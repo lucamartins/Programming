@@ -1,3 +1,4 @@
+// Exercicio proposto numero 3.3
 /* Recebe uma string e compacta num unico caractere qualquer conjunto de caracteres repitidos consecutivos */
 
 #include<stdio.h>

@@ -1,3 +1,4 @@
+// Exercicio proposto numero 3.4
 /* Transforma a string s, deixando apenas o caracteres existentes de n em n posicoes */
 #include<stdio.h>
 #include<string.h>

@@ -1,3 +1,4 @@
+// Exercicio proposto numero 3.2
 /* Devolve o n-esimo caracter da string s */
 
 #include<stdio.h>

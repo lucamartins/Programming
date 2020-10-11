@@ -1,4 +1,5 @@
-/* Ex proposto numero 3.1: Receber uma string, retirando todos os caracteres que nao se encontram repetidos */
+// Exercicio proposto numero 3.1
+/* Receber uma string, retirando todos os caracteres que nao se encontram repetidos */
 
 #include<stdio.h>
 #include<string.h>
