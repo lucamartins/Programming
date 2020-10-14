@@ -1,24 +1,29 @@
 #include<stdio.h>
 #define INF 1e9
 
-int cubo_menor_elemento(int v[], int *pmenor){
+int *cubo_menor_elemento(int v[]){
+      int menor_elemento=INF;
+      int *pmenor_elemento = &menor_elemento;
+
       for(int i=0; i<10; i++){
-            if(*pmenor > v[i]){
-                  *pmenor = v[i];
+            if(menor_elemento > v[i]){
+                  menor_elemento = v[i];
             }
       }
-      *pmenor = *pmenor * *pmenor * *pmenor;
-      return *pmenor;
+      menor_elemento = menor_elemento * menor_elemento * menor_elemento;
+      return pmenor_elemento;
 }
 
-int quadrado_maior_elemento(int v[], int *pmaior){
+int quadrado_maior_elemento(int v[]){
+      int maior_elemento=0;
+
       for(int i=0; i<10; i++){
-            if(*pmaior < v[i]){
-                  *pmaior = v[i];
+            if(maior_elemento < v[i]){
+                  maior_elemento = v[i];
             }
       }
-      *pmaior = *pmaior * *pmaior;
-      return *pmaior;
+      maior_elemento = maior_elemento * maior_elemento;
+      return maior_elemento;
 }
 
 void imprimir_inversa(int v[]){
@@ -69,17 +74,16 @@ double media_vetor(int v[]){
 
 int main(){
       int v[10], menor=INF, maior=0;
-      int *pmenor=&menor, *pmaior=&maior;
 
-      for(int i=0; i<10; i++){
+      for(int i=0; i<10; i++){ // 1.1
             scanf("%d", &v[i]);
       }
 
-      separa_paridade(v);
-      imprimir_inversa(v);
-      printf("A media dos valores do vetor e: %.2lf\n", media_vetor(v));
-      printf("O cubo do valor do menor elemento do vetor e: %d\n", cubo_menor_elemento(v, pmenor));
-      printf("O quadrado do valor do maior elemento do vetor e: %d\n", quadrado_maior_elemento(v, pmaior));
+      separa_paridade(v); // 1.5
+      imprimir_inversa(v); // 1.4
+      printf("A media dos valores do vetor e: %.2lf\n", media_vetor(v)); // 1.6
+      printf("O cubo do valor do menor elemento do vetor e: %d\n", *cubo_menor_elemento(v)); // 1.2
+      printf("O quadrado do valor do maior elemento do vetor e: %d\n", quadrado_maior_elemento(v)); // 1.3
 
       return 0;
 }
