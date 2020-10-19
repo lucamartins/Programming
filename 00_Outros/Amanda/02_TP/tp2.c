@@ -35,7 +35,7 @@ void exportar_lista_func(sf funcionarios[], char parametro_3[], int qnt_func){
     for(int i=0; i<qnt_func; i++){
         fputs(funcionarios[i].nome, file);
         fprintf(file, "\n%.2lf\n", funcionarios[i].salario);
-        fprintf(file, "%d%c%d%c%d\n", funcionarios[i].dia, funcionarios[i].barra1, funcionarios[i].mes, funcionarios[i].barra2, funcionarios[i].ano);
+        fprintf(file, "%02d%c%02d%c%d\n", funcionarios[i].dia, funcionarios[i].barra1, funcionarios[i].mes, funcionarios[i].barra2, funcionarios[i].ano);
         fprintf(file, "%s\n", funcionarios[i].departamento);
     }
     fclose(file);
@@ -50,7 +50,7 @@ void listar_func_dep(sf funcionarios[], char parametro_3[], int qnt_func){
         if(strcmp(funcionarios[i].departamento, parametro_3) == 0){
             printf("%s\n", funcionarios[i].nome);
             printf("%.2lf\n", funcionarios[i].salario);
-            printf("%d%c%d%c%d\n", funcionarios[i].dia, funcionarios[i].barra1, funcionarios[i].mes, funcionarios[i].barra2, funcionarios[i].ano);
+            printf("%02d%c%02d%c%d\n", funcionarios[i].dia, funcionarios[i].barra1, funcionarios[i].mes, funcionarios[i].barra2, funcionarios[i].ano);
             printf("%s\n", funcionarios[i].departamento);
         }
     }
@@ -101,20 +101,20 @@ void funcionario_mais_antigo(sf funcionarios[], int qnt_func){
             }
             printf("%s\n", mais_antigo_dia[cnt3-1].nome);
             printf("%.2lf\n", mais_antigo_dia[cnt3-1].salario);
-            printf("%d%c%d%c%d\n", mais_antigo_dia[cnt3-1].dia, mais_antigo_dia[cnt3-1].barra1, mais_antigo_dia[cnt3-1].mes, mais_antigo_dia[cnt3-1].barra2, mais_antigo_dia[cnt3-1].ano);
+            printf("%02d%c%02d%c%d\n", mais_antigo_dia[cnt3-1].dia, mais_antigo_dia[cnt3-1].barra1, mais_antigo_dia[cnt3-1].mes, mais_antigo_dia[cnt3-1].barra2, mais_antigo_dia[cnt3-1].ano);
             printf("%s\n", mais_antigo_dia[cnt3-1].departamento);
         }
         else{
         printf("%s\n", mais_antigo_mes[cnt2-1].nome);
         printf("%.2lf\n", mais_antigo_mes[cnt2-1].salario);
-        printf("%d%c%d%c%d\n", mais_antigo_mes[cnt2-1].dia, mais_antigo_mes[cnt2-1].barra1, mais_antigo_mes[cnt2-1].mes, mais_antigo_mes[cnt2-1].barra2, mais_antigo_mes[cnt2-1].ano);
+        printf("%02d%c%02d%c%d\n", mais_antigo_mes[cnt2-1].dia, mais_antigo_mes[cnt2-1].barra1, mais_antigo_mes[cnt2-1].mes, mais_antigo_mes[cnt2-1].barra2, mais_antigo_mes[cnt2-1].ano);
         printf("%s\n", mais_antigo_mes[cnt2-1].departamento);
         }
     } 
     else{
         printf("%s\n", mais_antigo_ano[cnt1-1].nome);
         printf("%.2lf\n", mais_antigo_ano[cnt1-1].salario);
-        printf("%d%c%d%c%d\n", mais_antigo_ano[cnt1-1].dia, mais_antigo_ano[cnt1-1].barra1, mais_antigo_ano[cnt1-1].mes, mais_antigo_ano[cnt1-1].barra2, mais_antigo_ano[cnt1-1].ano);
+        printf("%02d%c%02d%c%d\n", mais_antigo_ano[cnt1-1].dia, mais_antigo_ano[cnt1-1].barra1, mais_antigo_ano[cnt1-1].mes, mais_antigo_ano[cnt1-1].barra2, mais_antigo_ano[cnt1-1].ano);
         printf("%s\n", mais_antigo_ano[cnt1-1].departamento);
     }
 }
@@ -164,20 +164,20 @@ void func_mais_antg_dep(sf funcionarios[], char parametro_3[], int qnt_func){
             }
             printf("%s\n", mais_antigo_dia[cnt3-1].nome);
             printf("%.2lf\n", mais_antigo_dia[cnt3-1].salario);
-            printf("%d%c%d%c%d\n", mais_antigo_dia[cnt3-1].dia, mais_antigo_dia[cnt3-1].barra1, mais_antigo_dia[cnt3-1].mes, mais_antigo_dia[cnt3-1].barra2, mais_antigo_dia[cnt3-1].ano);
+            printf("%02d%c%02d%c%d\n", mais_antigo_dia[cnt3-1].dia, mais_antigo_dia[cnt3-1].barra1, mais_antigo_dia[cnt3-1].mes, mais_antigo_dia[cnt3-1].barra2, mais_antigo_dia[cnt3-1].ano);
             printf("%s\n", mais_antigo_dia[cnt3-1].departamento);
         }
         else{
         printf("%s\n", mais_antigo_mes[cnt2-1].nome);
         printf("%.2lf\n", mais_antigo_mes[cnt2-1].salario);
-        printf("%d%c%d%c%d\n", mais_antigo_mes[cnt2-1].dia, mais_antigo_mes[cnt2-1].barra1, mais_antigo_mes[cnt2-1].mes, mais_antigo_mes[cnt2-1].barra2, mais_antigo_mes[cnt2-1].ano);
+        printf("%02d%c%02d%c%d\n", mais_antigo_mes[cnt2-1].dia, mais_antigo_mes[cnt2-1].barra1, mais_antigo_mes[cnt2-1].mes, mais_antigo_mes[cnt2-1].barra2, mais_antigo_mes[cnt2-1].ano);
         printf("%s\n", mais_antigo_mes[cnt2-1].departamento);
         }
     } 
     else{
         printf("%s\n", mais_antigo_ano[cnt1-1].nome);
         printf("%.2lf\n", mais_antigo_ano[cnt1-1].salario);
-        printf("%d%c%d%c%d\n", mais_antigo_ano[cnt1-1].dia, mais_antigo_ano[cnt1-1].barra1, mais_antigo_ano[cnt1-1].mes, mais_antigo_ano[cnt1-1].barra2, mais_antigo_ano[cnt1-1].ano);
+        printf("%02d%c%02d%c%d\n", mais_antigo_ano[cnt1-1].dia, mais_antigo_ano[cnt1-1].barra1, mais_antigo_ano[cnt1-1].mes, mais_antigo_ano[cnt1-1].barra2, mais_antigo_ano[cnt1-1].ano);
         printf("%s\n", mais_antigo_ano[cnt1-1].departamento);
     }
 }
