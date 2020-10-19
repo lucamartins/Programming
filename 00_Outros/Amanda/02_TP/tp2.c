@@ -58,7 +58,7 @@ void listar_func_dep(sf funcionarios[], char parametro_3[], int qnt_func){
 
 // Funcao 3
 void funcionario_mais_antigo(sf funcionarios[], int qnt_func){
-    sf mais_antigo_ano[4], mais_antigo_mes[4], mais_antigo_dia[4]; int cnt1=0, cnt2=0, cnt3=0;
+    sf mais_antigo_ano[1005], mais_antigo_mes[1005], mais_antigo_dia[1005]; int cnt1=0, cnt2=0, cnt3=0;
     int ano=INF, mes=INF, dia=INF;
 
     // Checar quem eh mais antigo por ano primeiramente
@@ -121,7 +121,7 @@ void funcionario_mais_antigo(sf funcionarios[], int qnt_func){
 
 // Funcao 4
 void func_mais_antg_dep(sf funcionarios[], char parametro_3[], int qnt_func){
-    sf mais_antigo_ano[4], mais_antigo_mes[4], mais_antigo_dia[4]; int cnt1=0, cnt2=0, cnt3=0;
+    sf mais_antigo_ano[1005], mais_antigo_mes[1005], mais_antigo_dia[1005]; int cnt1=0, cnt2=0, cnt3=0;
     int ano=INF, mes=INF, dia=INF;
 
     // Checar quem eh mais antigo por ano primeiramente
@@ -216,7 +216,7 @@ int main(){
 
     int qnt_func; scanf("%d", &qnt_func);
 
-    sf funcionarios[4];
+    sf funcionarios[1005];
 
     FILE *file;
     file = fopen(nome_arq, "r");
@@ -239,17 +239,12 @@ int main(){
         }
     }
     
-
-    sort_struct_alpha(funcionarios, qnt_func);
-
-    
     if(num_funcao == 1) exportar_lista_func(funcionarios, parametro_3, qnt_func);
     else if(num_funcao == 2) listar_func_dep(funcionarios, parametro_3, qnt_func);
     else if(num_funcao == 3) funcionario_mais_antigo(funcionarios, qnt_func);
     else if(num_funcao == 4) func_mais_antg_dep(funcionarios, parametro_3, qnt_func);
     else if(num_funcao == 5) media_salarial(funcionarios, qnt_func);
     else if(num_funcao == 6) media_salarial_dep(funcionarios, parametro_3, qnt_func);
-
 
     fclose(file);
 
