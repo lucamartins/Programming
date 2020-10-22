@@ -1,16 +1,36 @@
+Amadeu Lee
+3700.00
+13/08/2020
+Administrativo
 Beltrano Junior Siqueira
 4750.00
-24/06/2009
+24/06/2200
 Gerencia
-Fulano de Tal Oliveira
-1500.00
-03/02/2017
-Administrativo
-Joao dos Santos Aguiar
-3700.00
-13/08/2011
-Administrativo
-Jose da Silva Sauro
+Gabriel Magalhes De Castro
 2000.00
 24/07/2016
+Administrativo
+Jose Carlos Lee
+2000.00
+24/09/2016
 Financeiro
+Jose da Silva Sauro Pereira Johansen 
+2000.00
+24/06/2016
+PH
+Paulo Freire da Silva
+2000.00
+24/05/2016
+Escritor
+Robsbaldo Junior Pereira Silva
+1500.00
+03/02/2017
+Financeiro
+Saramago Credulson Neto Filho
+2000.00
+24/04/2016
+Escritor
+Yasmin Rodrigues Pequena
+2000.00
+24/10/2016
+PH
