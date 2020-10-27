@@ -29,7 +29,7 @@ int le_string(char *str, int n){
                   break;
             }
       }
-      if(aux == 1){
+      if(aux == 1){ // Se aux == 1, entao leu com quebra de linha. \n esta embutido no vetor de caracteres
             str[i-1] = 0;
       }
       else str[i] = 0;
