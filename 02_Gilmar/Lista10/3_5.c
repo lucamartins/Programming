@@ -17,7 +17,8 @@ char *xspace(char *s){
 }
 
 int main(){
-    char s[100]; gets(s);
+    char s[100]; 
+    gets(s);
 
     printf("%s\n", xspace(s));
 
