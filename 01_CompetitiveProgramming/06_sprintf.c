@@ -1,3 +1,7 @@
+
+// Funcao sprintf(str, "texto com %variaveis", variaveis)
+// Transforma Texto + Variaveis dentro dele em string unica
+
 #include<stdio.h>
 #include<string.h>
 

@@ -68,8 +68,7 @@ int main(){
         printf("NAO EH PERMUTACAO\n");
         printf("%d\n", soma);
     }
-
-
+    
 
     return 0;
 }
