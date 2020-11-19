@@ -13,7 +13,7 @@ int main(){
 
     // Ha uma outra notacao mais facil e que deve ser utilizada
 
-    printf("%s\n", pp1->nome);  // Usando notacao -> 
+    printf("%s\n", pp1->nome);  // Usando notacao -> Seta
 
 
     return 0;

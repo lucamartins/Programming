@@ -12,8 +12,7 @@ struct Pessoa{
 int main(){
     struct Pessoa p1 = {"Ana", 30};
     struct Pessoa p2 = p1;
-
-
+    
 
     return 0;
 }

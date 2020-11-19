@@ -1,9 +1,9 @@
-// Utilizar typedef combinado com a declaracao
+// Utilizar typedef combinado com a declaracao -- Deve ser utilizado dessa maneira!
 
 #include <stdio.h>
 #include <string.h>
 
-typedef struct cadastro_pessoa{
+typedef struct{
     char nome[60];
     int idade;
 } Pessoa;
