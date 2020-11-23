@@ -14,4 +14,6 @@ int main(){
 
       printf("%s\n", soma);
       printf("%d\n", strlen(soma));
+
+      return 0;
 }
