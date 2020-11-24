@@ -8,58 +8,24 @@ typedef struct {
     int b;
 } tRacional;
 
-// Reduzir fracao
-void reduzir_fracao(tRacional *r){
-    int i;
-    int menor = r->a >= r->b ? r->b : r->a;
 
-    if(menor >= 0){
-        for(i=2; i<=menor; i++){
-            if((r->a)%i==0 && (r->b)%i==0){
-                while((r->a)%i==0 && (r->b)%i==0){
-                    r->a /= i;
-                    r->b /= i;
-                }
-            }
-        }
-    }
-    else{
-        for(i=-2; i>=menor; i--){
-            if((r->a)%i==0 && (r->b)%i==0){
-                while((r->a)%i==0 && (r->b)%i==0){
-                    r->a /= i;
-                    r->b /= i;
-                }
-            }
-        }
-        r->a = -r->a;
-        r->b = -r->b;
-    }
-}
-
-// Recebe A e B e retorna a struct com o racional
-tRacional retorna_racional(int a, int b){
-    tRacional numero;
-    numero.a = a;
-    numero.b = b;
-    return numero;
-}
-
-// Calcular MDC entre A e B
 int MDC(int a, int b){
-    int i;
-    int MDC;
-    int menor_numero = a >= b ? b : a;
+    int i, MDC, menor_numero;
 
-    for(i=0; i<menor_numero; i++){
-        if(i%a==0 && i%b==0){
+    menor_numero = a >= b ? b : a;
+    if(menor_numero < 0){
+        menor_numero = menor_numero * (-1);
+    }
+
+    for(i=1; i<=menor_numero; i++){
+        if(a%i==0 && b%i==0){
             MDC = i;
         }
     }
     return MDC;
 }
 
-// Calculo do MMC entre os denominadores
+
 int MMC(int b1, int b2){
     int i;
     int maior = b1 >= b2 ? b1 : b2;
@@ -72,9 +38,20 @@ int MMC(int b1, int b2){
 }
 
 
-//
-// Agora sim comecam os calculos propriamente ditos: +, -, *, /
-//
+void reduzir_fracao(tRacional *r){    
+    int mdc = MDC(r->a, r->b);
+
+    r->a = r->a / mdc;
+    r->b = r->b / mdc;
+}
+
+
+tRacional retorna_racional(int a, int b){
+    tRacional numero;
+    numero.a = a;
+    numero.b = b;
+    return numero;
+}
 
 tRacional soma(tRacional r1, tRacional r2){
     tRacional res_soma;
@@ -101,12 +78,12 @@ tRacional sub(tRacional r1, tRacional r2){
     int mmc = MMC(r1.b, r2.b);
 
     r1.a = (mmc/r1.b) * r1.a;
-    r2.a = (mmc/r2.b) * r2.a;
+    r2.a = -(mmc/r2.b) * r2.a;
 
     r1.b = mmc;
     r2.b = mmc;
 
-    res_sub.a = r1.a - r2.a;
+    res_sub.a = r1.a + r2.a;
     res_sub.b = mmc;
 
     reduzir_fracao(&res_sub);
@@ -141,6 +118,7 @@ tRacional divisao(tRacional r1, tRacional r2){
 
     return res_div;
 }
+
 
 int main(){
     char op;
