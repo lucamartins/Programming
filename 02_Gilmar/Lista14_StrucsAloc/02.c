@@ -70,7 +70,7 @@ int reduzir_e_verificar_equivalencia(int a, int b, int c, int d){
 void analise(Fracao *fracao, int N, int num_caso){
     int qnt=0;
 
-    printf("Caso teste %d\n", num_caso+1);
+    printf("Caso de teste %d\n", num_caso+1);
 
     int i, j;
     for(i=0; i<N; i++){
