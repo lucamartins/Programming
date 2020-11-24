@@ -143,6 +143,7 @@ int main(){
             divisao(n1, n2);
         }
     }
+    
 
     return 0;
 }
