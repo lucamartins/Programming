@@ -9,7 +9,7 @@ int main(){
     Pessoa p1 = {"Luca", 30};
     Pessoa *pp1 = &p1;
 
-    printf("%s\n", (*pp1).nome); // Usando notacao * padrao de ponteiros
+    printf("%s\n", (*pp1).nome); // Usando notacao * padrao de ponteiros. Observe que deve ser utilizado () por causa da precedência do operador ponto.
 
     // Ha uma outra notacao mais facil e que deve ser utilizada
 
