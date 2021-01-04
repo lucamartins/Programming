@@ -1,3 +1,7 @@
+// Técnica para validação de leitura de inteiros
+// Fonte: https://jackstromberg.com/2013/02/how-to-validate-numeric-integer-input-in-c/
+
+
 #include<stdio.h>
 int main(void){
 	// input	user input -- hopefully a number
@@ -12,11 +16,10 @@ int main(void){
 		while((temp=getchar()) != EOF && temp != '\n');
 		printf("Invalid input... please enter a number: ");
 		status = scanf("%d", &input);
-		if(input < 0) status = 0;
 	}
 
-	printf("Your number is %d\n",input);
+	printf("Your number is %d\n", input);
+	
+	
 	return 0;
 }
-
-// https://jackstromberg.com/2013/02/how-to-validate-numeric-integer-input-in-c/
